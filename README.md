@@ -112,11 +112,11 @@ done
 ```
 ## Explanation
 
-- #!/bin/bash: This is a shebang line that tells the system to use the Bash shell to execute the script.
-- for ip in $(seq 1 254); do: This starts a for loop that iterates over the sequence of numbers from 1 to 254. The seq 1 254 command generates this sequence.
-- ping -c 1 $1.$ip: This sends a single (-c 1) ping request to the IP address formed by appending the current value of ip to the first argument passed to the script ($1).
-- | grep "64 bytes": This pipes the output of the ping command to grep, which filters the output to include only lines containing "64 bytes" (indicating a successful ping response).
-- | cut -d " " -f4: This pipes the filtered output to cut, which extracts the fourth field of the line, using a space as the delimiter.
-- | tr -d ":": This pipes the extracted field to tr, which deletes (-d) any colons ( : ) from the output.
-- &: This runs the entire command in the background, allowing the loop to continue without waiting for the current iteration to finish.
-- done: This marks the end of the for loop.
+- `#!/bin/bash`: This is a shebang line that tells the system to use the Bash shell to execute the script.
+- `for ip in $(seq 1 254); do`: This starts a for loop that iterates over the sequence of numbers from 1 to 254. The seq 1 254 command generates this sequence.
+- `ping -c 1 $1.$ip`: This sends a single (-c 1) ping request to the IP address formed by appending the current value of ip to the first argument passed to the script ($1).
+- `| grep "64 bytes"`: This pipes the output of the ping command to grep, which filters the output to include only lines containing "64 bytes" (indicating a successful ping response).
+- `| cut -d " " -f4`: This pipes the filtered output to cut, which extracts the fourth field of the line, using a space as the delimiter.
+- `| tr -d ":"`: This pipes the extracted field to tr, which deletes (-d) any colons ( : ) from the output.
+- `&`: This runs the entire command in the background, allowing the loop to continue without waiting for the current iteration to finish.
+- `done`: This marks the end of the for loop.
