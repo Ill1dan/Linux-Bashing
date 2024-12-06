@@ -1,4 +1,5 @@
 # Linux-Bashing
+
 ## Navigation
 
 | Command       | Description                        |
