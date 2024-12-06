@@ -87,7 +87,7 @@
 | `service`          | Start any service or stop any service  |
 | `systemctl`          | Enables any service for the entire time including reboot  |
 
-## Standard Output Redirection
+## Package Manager
 
 | Command       | Description                             |
 |---------------|-----------------------------------------|
