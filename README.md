@@ -8,7 +8,7 @@
 | `cd`          | Change the current directory       |
 | `pwd`         | Print the current working directory|
 
-## Disolaying Data
+## Displaying Data
 
 | Command       | Description                        |
 |---------------|------------------------------------|
